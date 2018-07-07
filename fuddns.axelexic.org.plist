@@ -5,6 +5,9 @@
   <key>Label</key>
   <string>fuddns.axelexic.org</string>
 
+  <key>UserName</key>
+  <string>swami</string>
+
   <key>ProgramArguments</key>
   <array>
     <string>/Users/swami/Library/fu-ddns/update.sh</string>
