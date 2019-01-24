@@ -9,7 +9,7 @@ git_msg ( ) {
 
 echo "==== Invoking CRON at $(date) ==== " >> "$LOG_FILE" 2>&1
 
-curl -s -o "$THIS_DIR/update.txt" "http://www.myexternalip.com/raw"  >> "$LOG_FILE" 2>&1 && \
+curl -s -o "$THIS_DIR/update.txt" "http://myexternalip.com/raw"  >> "$LOG_FILE" 2>&1 && \
     git -C "$THIS_DIR" add  "$THIS_DIR/update.txt"  >> "$LOG_FILE" 2>&1 && \
     git -C "$THIS_DIR" commit -m "$(git_msg)"  >> "$LOG_FILE" 2>&1
 
