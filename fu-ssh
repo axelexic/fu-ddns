@@ -1,0 +1,10 @@
+USER_NAME=
+
+if [ "$#" -gt 0 ];
+then
+  USER_NAME="$1@"
+fi
+
+IP=$(curl -s https://raw.githubusercontent.com/axelexic/fu-ddns/master/update.txt)
+echo "Connecting to $USER_NAME$IP..."
+ssh "$USER_NAME$IP"
